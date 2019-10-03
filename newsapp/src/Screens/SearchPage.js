@@ -35,19 +35,19 @@ const SearchScreen = ()=>{
     },[])*/
     
     return (
-        <View>
-            <ScrollView>
+        <View style={{flex:1}}>
+            
             <SearchBar
             term={searchTerm}
             change={(newTerm)=>{onChangeSearchTerm(newTerm)}}
             onTermSubmited={(wordToSearch)=>{getResult()}}
             />
             
-            
+            <ScrollView>
             {error?<Text>{error}</Text>:null}
-            <ResultsList title = 'entertainment' results={news}/>
-            <ResultsList title = 'sports' results={news}/>
-            <ResultsList title = 'health' results={news}/>
+            <ResultsList title = 'entertainment' results={news} />
+            <ResultsList title = 'sports' results={news} />
+            <ResultsList title = 'health' results={news} />
           
 
             </ScrollView>
